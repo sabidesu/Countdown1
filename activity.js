@@ -31,6 +31,9 @@ seeBooks()
 
 /* (4) Write a one-line arrow function that takes in a number and returns a string stating whether the
 number is positive or negative using a ternary operator (assume the number will never be zero) */
+const polarity = (x) => x > 0 ? x + " is positive" : x + " is negative";
+console.log(polarity(11));
+console.log(polarity(-11));
 
 /* (5) Write a switch statement for a 'day' variable that prints out something based off of what day of
 the week it is
@@ -39,6 +42,14 @@ i.e. if it's Monday, print "good luck" or wednesday print "hump day" or friday p
 /* (6) Write an arrow function that takes in a number, and uses a for loop to return the sum of every
 number from 1 up to that number
 ex. sumUp(7) = 28 */
+function sumUp(x) {
+	let sum = 0
+	for (let i = 1; i <= x; i++) {
+		sum += i;
+	}
+	return sum;
+}
+console.log(sumUp(7));
 
 /* Harder Challenge */
 
@@ -49,6 +60,12 @@ me what I should wear accordingly */
 using .forEach() */
 
 const exampleArray = ["Hello, world!", 8, null, false, "", "0", -22];
+function truthy(arr) {
+	let truth = 0;
+	exampleArray.forEach((x) => x ? truth++ : truth);
+	return truth;
+}
+console.log(truthy(exampleArray));
 
 /* (9) Using the map function and arrow syntax, return an array of object that contain a fullName field
 and an averageGrade field representing the letter grade that corresponds to their GPA */
