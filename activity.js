@@ -13,6 +13,20 @@ const bookList = [
     { title: "Moby Dick", author: "Herman Melville" },
 ];
 
+// challenge (1)
+const addBook = (title, author) => bookList.push({title, author});
+addBook("holy cows", "bo divine");
+console.log(bookList);
+
+// challenge (2)
+const delBook = (bookID) => bookList.splice(bookID, 1)
+delBook(4);
+console.log(bookList);
+
+// challenge (3)
+const seeBooks = () => bookList.forEach((book) => console.log("%s by %s", book.title, book.author));
+seeBooks()
+
 /* Intermediate Challenge */
 
 /* (4) Write a one-line arrow function that takes in a number and returns a string stating whether the
